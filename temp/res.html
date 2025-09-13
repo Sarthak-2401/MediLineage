@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h2 { margin-bottom: 20px; }
+        .result { 
+            margin-top: 20px; 
+            padding: 15px; 
+            border-radius: 8px; 
+            background: #e7f3fe; 
+            border: 1px solid #b3d7ff;
+        }
+        .positive { background: #ffdddd; border-color: #ff9999; }
+        .negative { background: #ddffdd; border-color: #99ff99; }
+        a { display: inline-block; margin-top: 20px; text-decoration: none; color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Results</h2>
+
+        <div class="result {{ 'positive' if diabetes_outcome==1 else 'negative' }}">
+            <h3>Diabetes</h3>
+            <p>Probability: {{ diabetes_prob | round(2) }}%</p>
+            <p>Outcome: {{ 'Positive' if diabetes_outcome==1 else 'Negative' }}</p>
+        </div>
+
+        <div class="result {{ 'positive' if cancer_outcome==1 else 'negative' }}">
+            <h3>Cancer</h3>
+            <p>Probability: {{ cancer_prob | round(2) }}%</p>
+            <p>Outcome: {{ 'Positive' if cancer_outcome==1 else 'Negative' }}</p>
+        </div>
+
+        <a href="/">⬅ Back to Form</a>
+    </div>
+</body>
+</html>

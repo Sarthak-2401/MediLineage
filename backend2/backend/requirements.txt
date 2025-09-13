@@ -1,0 +1,22 @@
+# Core
+flask==2.3.2
+flask-cors==3.0.10
+flask-sqlalchemy==3.0.5
+
+# Auth + Security
+flask-bcrypt==1.0.1
+pyjwt==2.8.0
+
+# Database migrations (optional but good)
+flask-migrate==4.0.5
+
+# ML / Data (optional for prediction module later)
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+
+# For visualization APIs (optional, if backend generates plots)
+matplotlib==3.8.4
+
+# Dev tools
+python-dotenv==1.0.1

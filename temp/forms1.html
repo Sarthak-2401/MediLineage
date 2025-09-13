@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h2 { text-align: center; margin-bottom: 20px; }
+        label { display: block; margin-top: 15px; }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px;
+            width: 100%;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Health Prediction Form</h2>
+        <form action="/predict" method="post">
+            <h3>Diabetes Inputs</h3>
+            <label>Glucose</label>
+            <input type="number" step="any" name="Glucose" required>
+            <label>Blood Pressure</label>
+            <input type="number" step="any" name="BloodPressure" required>
+            <label>Skin Thickness</label>
+            <input type="number" step="any" name="SkinThickness" required>
+            <label>Insulin</label>
+            <input type="number" step="any" name="Insulin" required>
+            <label>BMI</label>
+            <input type="number" step="any" name="BMI" required>
+            <label>Age</label>
+            <input type="number" step="any" name="Age" required>
+
+            <h3>Cancer Inputs</h3>
+            <label>Smoking (0=No, 1=Yes)</label>
+            <input type="number" min="0" max="1" name="Smoking" required>
+            <label>Genetic Risk</label>
+            <input type="number" step="any" name="GeneticRisk" required>
+            <label>Physical Activity (hours/week)</label>
+            <input type="number" step="any" name="PhysicalActivity" required>
+            <label>Alcohol Intake (units/week)</label>
+            <input type="number" step="any" name="AlcoholIntake" required>
+            <label>Cancer History (0=No, 1=Yes)</label>
+            <input type="number" min="0" max="1" name="CancerHistory" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

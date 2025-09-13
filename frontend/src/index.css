@@ -1,0 +1,9 @@
+@import "tailwindcss";
+html, body, #root {
+  height: 100%;
+}
+
+.bg-overlay {
+  /* subtle radial gradient on top of image */
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.68) 100%);
+}
